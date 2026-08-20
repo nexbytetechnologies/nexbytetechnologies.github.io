@@ -1,43 +1,187 @@
-# Astro Starter Kit: Minimal
+# Nexbyte Technologies
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Sitio web oficial de **Nexbyte Technologies**, enfocado en soluciones digitales modernas para pequeñas y medianas empresas (PYMEs).
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+El proyecto presenta los servicios de Nexbyte, demostraciones de trabajos desarrollados y un canal de contacto para potenciales clientes.
 
-## 🚀 Project Structure
+## 🌐 Sitio web
 
-Inside of your Astro project, you'll see the following folders and files:
+https://nexbytetechnologies.github.io/
+
+## 🚀 Características
+
+- Diseño moderno y responsive
+- Modo claro y oscuro
+- Navegación adaptada a dispositivos móviles
+- Identidad visual propia de Nexbyte Technologies
+- Sección de servicios
+- Portafolio de proyectos
+- Formulario de contacto funcional
+- Integración segura con Formspree
+- Validación de formularios
+- Protección anti-spam mediante honeypot
+- Mensajes de éxito y error sin abandonar la página
+- Despliegue automático con GitHub Actions
+- Publicación mediante GitHub Pages
+
+## 🛠️ Tecnologías
+
+- Astro
+- Tailwind CSS
+- TypeScript / JavaScript
+- HTML
+- CSS
+- Git
+- GitHub
+- GitHub Actions
+- GitHub Pages
+- Formspree
+
+## 📁 Estructura principal
 
 ```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+src/
+├── components/
+│   ├── About.astro
+│   ├── Contact.astro
+│   ├── Footer.astro
+│   ├── Hero.astro
+│   ├── Navbar.astro
+│   ├── Projects.astro
+│   ├── Services.astro
+│   └── ThemeToggle.astro
+│
+├── layouts/
+│   └── Layout.astro
+│
+├── pages/
+│   └── index.astro
+│
+└── styles/
+    └── global.css
+
+public/
+├── projects/
+│   └── nexopyme.png
+├── nexbyte-icon.png
+├── nexbyte-logo.png
+└── nexbyte-wordmark.png
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 💼 Portafolio
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### NexoPyme
 
-Any static assets, like images, can be placed in the `public/` directory.
+Primera demostración desarrollada por Nexbyte Technologies.
 
-## 🧞 Commands
+Landing page moderna y responsiva orientada a PYMEs que buscan fortalecer su presencia digital.
 
-All commands are run from the root of the project, from a terminal:
+**Ver demo:**
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+https://nexbytetechnologies.github.io/landing-pyme/
 
-## 👀 Want to learn more?
+## 📬 Contacto
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+El sitio incorpora un formulario de contacto conectado a Formspree.
+
+La implementación evita almacenar credenciales privadas en el frontend y utiliza:
+
+- solicitudes HTTPS
+- método POST
+- validación de campos
+- honeypot anti-spam
+- restricción de dominio
+- procesamiento externo mediante Formspree
+
+La integración con **WhatsApp Business** está preparada para ser incorporada cuando exista un número comercial destinado a Nexbyte Technologies.
+
+## 🔐 Seguridad
+
+Este repositorio no debe contener información sensible como:
+
+- contraseñas
+- tokens
+- claves API privadas
+- credenciales
+- secretos
+- archivos `.env` reales
+
+Los archivos de variables de entorno se encuentran excluidos mediante `.gitignore`.
+
+```gitignore
+.env
+.env.*
+!.env.example
+```
+
+Las futuras integraciones con APIs, backend, autenticación o bases de datos deberán mantener los secretos exclusivamente fuera del código público.
+
+## 💻 Desarrollo local
+
+Clonar el repositorio:
+
+```bash
+git clone https://github.com/nexbytetechnologies/nexbytetechnologies.github.io.git
+```
+
+Entrar al proyecto:
+
+```bash
+cd nexbytetechnologies.github.io
+```
+
+Instalar dependencias:
+
+```bash
+npm install
+```
+
+Ejecutar el entorno de desarrollo:
+
+```bash
+npm run dev
+```
+
+Por defecto Astro estará disponible en:
+
+```text
+http://localhost:4321/
+```
+
+## 📦 Build de producción
+
+```bash
+npm run build
+```
+
+La versión optimizada se genera en:
+
+```text
+dist/
+```
+
+## ☁️ Despliegue
+
+Cada actualización enviada a la rama `main` ejecuta automáticamente el workflow de GitHub Actions.
+
+```text
+Push a main
+     ↓
+GitHub Actions
+     ↓
+Build de Astro
+     ↓
+GitHub Pages
+     ↓
+nexbytetechnologies.github.io
+```
+
+## 📌 Estado
+
+**Nexbyte Technologies — Web principal V1**
+
+El proyecto continúa evolucionando con nuevas demostraciones, servicios e integraciones orientadas a PYMEs.
+
+---
+
+Developed by **Nexbyte Technologies**
