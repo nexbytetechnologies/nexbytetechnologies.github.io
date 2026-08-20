@@ -1,0 +1,107 @@
+<section
+  id="proyectos"
+  class="bg-linear-to-br from-[#EDE2D0] via-[#F4EBDD] to-[#E2E9F5] py-24 transition-colors dark:from-slate-950 dark:via-slate-950 dark:to-slate-900"
+>
+  <div class="mx-auto max-w-7xl px-6">
+
+    <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+
+      <div class="max-w-2xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600 dark:text-blue-400">
+          Proyectos
+        </p>
+
+        <h2 class="mt-4 text-4xl font-bold text-[#172033] dark:text-white">
+          Experiencias digitales que hablan por nuestro trabajo.
+        </h2>
+      </div>
+
+      <p class="max-w-md text-sm leading-6 text-[#5B6474] dark:text-slate-400">
+        Explora nuestras demostraciones y descubre cómo podemos adaptar
+        cada solución a las necesidades de una PYME.
+      </p>
+
+    </div>
+
+    <div class="mt-14">
+
+      <article
+        class="group overflow-hidden rounded-3xl border border-[#D3C5B2] bg-[#F8F1E7] shadow-xl shadow-slate-900/5 transition hover:-translate-y-1 hover:shadow-2xl dark:border-slate-800 dark:bg-slate-900"
+      >
+        <div class="grid lg:grid-cols-2">
+
+          <!-- Vista real del proyecto -->
+          <div class="relative min-h-[340px] overflow-hidden bg-slate-900">
+
+            <img
+              src={`${import.meta.env.BASE_URL}projects/nexopyme.png`}
+              alt="Vista previa del proyecto NexoPyme"
+              class="h-full min-h-[340px] w-full object-cover object-top transition duration-500 group-hover:scale-[1.02]"
+            />
+
+            <div
+              class="absolute inset-0 bg-linear-to-t from-slate-950/40 via-transparent to-transparent"
+            ></div>
+
+            <div class="absolute bottom-5 left-5">
+              <span
+                class="rounded-full border border-white/20 bg-slate-950/70 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur"
+              >
+                Demo 01
+              </span>
+            </div>
+
+          </div>
+
+          <!-- Información del proyecto -->
+          <div class="flex flex-col justify-center p-8 md:p-12">
+
+            <span class="text-sm font-semibold text-blue-600 dark:text-blue-400">
+              Desarrollo Web
+            </span>
+
+            <h3 class="mt-3 text-3xl font-bold text-[#172033] dark:text-white">
+              NexoPyme
+            </h3>
+
+            <p class="mt-5 leading-7 text-[#5B6474] dark:text-slate-400">
+              Landing page moderna y responsiva diseñada como demostración
+              para PYMEs que buscan una presencia digital profesional.
+            </p>
+
+            <div class="mt-6 flex flex-wrap gap-2">
+
+              <span class="rounded-full bg-[#E6DDD0] px-3 py-1 text-xs text-[#465064] dark:bg-slate-800 dark:text-slate-300">
+                Astro
+              </span>
+
+              <span class="rounded-full bg-[#E6DDD0] px-3 py-1 text-xs text-[#465064] dark:bg-slate-800 dark:text-slate-300">
+                Tailwind CSS
+              </span>
+
+              <span class="rounded-full bg-[#E6DDD0] px-3 py-1 text-xs text-[#465064] dark:bg-slate-800 dark:text-slate-300">
+                Responsive
+              </span>
+
+            </div>
+
+            <div class="mt-8">
+              <a
+                href="https://nexbytetechnologies.github.io/landing-pyme/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 font-semibold text-blue-600 transition hover:gap-3 hover:text-blue-500 dark:text-blue-400"
+              >
+                Ver demo
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,173 @@
+---
+import ThemeToggle from "./ThemeToggle.astro";
+
+const baseURL = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+---
+
+<header
+  class="fixed top-0 z-50 w-full border-b border-[#DDD5C8]/80 bg-[#EDE2D0]/90 backdrop-blur-xl transition-colors dark:border-slate-800 dark:bg-slate-950/85"
+>
+  <nav class="mx-auto max-w-7xl px-6">
+    <div class="flex items-center justify-between py-5">
+      <a href="#inicio" class="flex items-center gap-3">
+        <img
+          src={`${baseURL}nexbyte-icon.png`}
+          alt=""
+          class="h-12 w-12 shrink-0 object-contain"
+        />
+
+        <div class="w-[150px] leading-none">
+          <div
+            class="flex justify-between text-lg font-extrabold text-blue-600 dark:text-blue-400"
+          >
+            <span>N</span>
+            <span>E</span>
+            <span>X</span>
+            <span>B</span>
+            <span>Y</span>
+            <span>T</span>
+            <span>E</span>
+          </div>
+
+          <div
+            class="mt-1 flex justify-between text-[9px] font-medium text-[#5B6474] dark:text-slate-400"
+          >
+            <span>T</span>
+            <span>E</span>
+            <span>C</span>
+            <span>H</span>
+            <span>N</span>
+            <span>O</span>
+            <span>L</span>
+            <span>O</span>
+            <span>G</span>
+            <span>I</span>
+            <span>E</span>
+            <span>S</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Navegación escritorio -->
+      <div
+        class="hidden items-center gap-8 text-sm text-[#5B6474] md:flex dark:text-slate-300"
+      >
+        <a
+          href="#inicio"
+          class="transition hover:text-blue-600 dark:hover:text-white"
+        >
+          Inicio
+        </a>
+
+        <a
+          href="#servicios"
+          class="transition hover:text-blue-600 dark:hover:text-white"
+        >
+          Servicios
+        </a>
+
+        <a
+          href="#proyectos"
+          class="transition hover:text-blue-600 dark:hover:text-white"
+        >
+          Proyectos
+        </a>
+
+        <a
+          href="#nosotros"
+          class="transition hover:text-blue-600 dark:hover:text-white"
+        >
+          Nosotros
+        </a>
+
+        <a
+          href="#contacto"
+          class="transition hover:text-blue-600 dark:hover:text-white"
+        >
+          Contacto
+        </a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <ThemeToggle />
+
+        <a
+          href="#contacto"
+          class="hidden rounded-xl bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-500 sm:block"
+        >
+          Hablemos
+        </a>
+
+        <!-- Botón móvil -->
+        <button
+          id="menu-toggle"
+          type="button"
+          class="flex h-10 w-10 items-center justify-center rounded-xl border border-[#D3C5B2] bg-[#FFFDF8] text-xl text-[#172033] md:hidden dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          ☰
+        </button>
+      </div>
+    </div>
+
+    <!-- Menú móvil -->
+    <div
+      id="mobile-menu"
+      class="hidden border-t border-[#D3C5B2] pb-5 pt-4 md:hidden dark:border-slate-800"
+    >
+      <div
+        class="flex flex-col gap-4 text-sm text-[#5B6474] dark:text-slate-300"
+      >
+        <a class="mobile-link transition hover:text-blue-600" href="#inicio">
+          Inicio
+        </a>
+
+        <a class="mobile-link transition hover:text-blue-600" href="#servicios">
+          Servicios
+        </a>
+
+        <a class="mobile-link transition hover:text-blue-600" href="#proyectos">
+          Proyectos
+        </a>
+
+        <a class="mobile-link transition hover:text-blue-600" href="#nosotros">
+          Nosotros
+        </a>
+
+        <a class="mobile-link transition hover:text-blue-600" href="#contacto">
+          Contacto
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const menuButton = document.querySelector("#menu-toggle");
+  const mobileMenu = document.querySelector("#mobile-menu");
+  const mobileLinks = document.querySelectorAll(".mobile-link");
+
+  function closeMenu() {
+    mobileMenu?.classList.add("hidden");
+
+    if (menuButton) {
+      menuButton.textContent = "☰";
+      menuButton.setAttribute("aria-expanded", "false");
+    }
+  }
+
+  menuButton?.addEventListener("click", () => {
+    const isHidden = mobileMenu?.classList.toggle("hidden");
+
+    menuButton.textContent = isHidden ? "☰" : "✕";
+    menuButton.setAttribute("aria-expanded", isHidden ? "false" : "true");
+  });
+
+  mobileLinks.forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+</script>
